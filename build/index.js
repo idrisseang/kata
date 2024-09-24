@@ -1,7 +1,7 @@
 "use strict";
 /* Author : Idrisse Angama */
 const filterByTitle = (movies, searchedTitle) => {
-    const moviesFounded = movies.filter(movie => movie.title.toLowerCase() === searchedTitle.toLowerCase());
+    const moviesFounded = movies.filter(movie => movie.title.toLowerCase().includes(searchedTitle.toLowerCase()));
     return moviesFounded;
 };
 const recentMovies = [
@@ -31,4 +31,4 @@ const recentMovies = [
         actors: ["Sophia Loren", "Daniel Craig", "Emma Watson"]
     }
 ];
-console.log(filterByTitle(recentMovies, "the hidden world"));
+console.log(filterByTitle(recentMovies, "ocean"));

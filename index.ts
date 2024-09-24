@@ -23,7 +23,7 @@ interface Movie {
 
 
 const filterByTitle = (movies: Movie[], searchedTitle: string) : Movie[] | undefined => {
-    const moviesFounded = movies.filter(movie => movie.title.toLowerCase() === searchedTitle.toLowerCase());
+    const moviesFounded = movies.filter(movie => movie.title.toLowerCase().includes(searchedTitle.toLowerCase()));
     return moviesFounded;
 }
 
@@ -55,4 +55,4 @@ const recentMovies: Movie[] =  [
     }
   ];
 
-  console.log(filterByTitle(recentMovies, "the hidden world"));
+  console.log(filterByTitle(recentMovies, "ocean"));
