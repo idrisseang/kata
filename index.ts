@@ -11,6 +11,7 @@ Cette fonction doit retourner un nouveau tableau
 contenant uniquement les objets dont la propriété 
 title contient la chaîne de caractères searchedTitle 
 spécifiée en paramètre et doit être insensible à la casse.
+
 Tu pourras tester ta fonction sur ce tableau :
 
 */
@@ -22,9 +23,9 @@ interface Movie {
 }
 
 
-const filterByTitle = (movies: Movie[], searchedTitle: string) : Movie[] | undefined => {
-    const moviesFounded = movies.filter(movie => movie.title.toLowerCase().includes(searchedTitle.toLowerCase()));
-    return moviesFounded;
+const filterByTitle = (movies: Movie[], searchedTitle: string) : Movie[] => {
+    const moviesFound = movies.filter(movie => movie.title.toLowerCase().includes(searchedTitle.toLowerCase()));
+    return moviesFound;
 }
 
 const recentMovies: Movie[] =  [
@@ -55,4 +56,4 @@ const recentMovies: Movie[] =  [
     }
   ];
 
-  console.log(filterByTitle(recentMovies, "ocean"));
+console.log(filterByTitle(recentMovies, "ocean"));

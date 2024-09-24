@@ -1,8 +1,8 @@
 "use strict";
 /* Author : Idrisse Angama */
 const filterByTitle = (movies, searchedTitle) => {
-    const moviesFounded = movies.filter(movie => movie.title.toLowerCase().includes(searchedTitle.toLowerCase()));
-    return moviesFounded;
+    const moviesFound = movies.filter(movie => movie.title.toLowerCase().includes(searchedTitle.toLowerCase()));
+    return moviesFound;
 };
 const recentMovies = [
     {
