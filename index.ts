@@ -15,12 +15,19 @@ Tu pourras tester ta fonction sur ce tableau :
 
 */
 
-const filterByTitle = (movies, searchedTitle) => {
-    const moviesFounded = movies.find(movie => movie.title.toLowerCase() === searchedTitle.toLowerCase());
+interface Movie {
+    title: string,
+    releaseDate: string,
+    actors: string[]
+}
+
+
+const filterByTitle = (movies: Movie[], searchedTitle: string) : Movie[] | undefined => {
+    const moviesFounded = movies.filter(movie => movie.title.toLowerCase() === searchedTitle.toLowerCase());
     return moviesFounded;
 }
 
-const recentMovies = [
+const recentMovies: Movie[] =  [
     {
       title: "The Great Adventure",
       releaseDate: "2023-07-15",
